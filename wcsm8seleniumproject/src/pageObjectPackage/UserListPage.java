@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class UserListPage {
+public class UserListPage  {
 
 	@FindBy(xpath="//input[@value='Create New User']") private WebElement createNewUserButton;
 	@FindBy(xpath="//*[@name='username']") private WebElement userNameTB;
@@ -25,7 +25,7 @@ public class UserListPage {
 	}
 	
 	
-	//utilaization
+	//utilization
 
 	public WebElement getCreateNewUserButton() {
 		return createNewUserButton;
@@ -69,7 +69,7 @@ public class UserListPage {
 	
 	public void createUserMethod(String usn,String pass,String Fn,String Ln) throws InterruptedException
 	{
-		Thread.sleep(2000);
+		
 		createNewUserButton.click();
 		Thread.sleep(1000);
 		userNameTB.sendKeys(usn);
@@ -80,12 +80,23 @@ public class UserListPage {
 		
 		firstNameTB.sendKeys(Fn);
 		Thread.sleep(1000);
+		
 		lastNameTB.sendKeys(Ln);
 		Thread.sleep(1000);
-		createUserButton.clear();
+		createUserButton.click();
+		
+
 		
 	}
 	
-	
+	public void deleteUserMethod() throws InterruptedException
+	{
+		userCreatedLink.click();
+		Thread.sleep(1000);
+		deleteUserButton.click();
+		WorkLib wlp = new WorkLib();
+		wlp.handleConfirmationPopup();
+		Thread.sleep(1000);
+	}
 	
 }
