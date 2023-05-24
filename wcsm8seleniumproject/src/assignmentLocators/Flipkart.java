@@ -10,58 +10,58 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Flipkart {
 
 	public static void main(String[] args) throws InterruptedException {
-		
-		 System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
-			
-			ChromeOptions co = new ChromeOptions();
-			
-			co.addArguments("--remote-allow-origins=*");
-			
-			WebDriver driver=new ChromeDriver(co);
-			
-			driver.manage().window().maximize();
-			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			
-			driver.get("https://www.flipkart.com/");
-			
-			
-			
-			driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
-			
-			
-			
-			driver.findElement(By.xpath("//input[@name='q']")).sendKeys("HP laptop");
-			
-			
-			
-			driver.findElement(By.xpath("//button[@class='L0Z3Pu']")).click();
-			
-		
-			
-			driver.findElement(By.xpath("//div[@class='_3879cV' and text()='Core i7']")).click();
-			
-		
-			
-			driver.findElement(By.xpath("//div[@class='_2gmUFU _3V8rao' and text()='Brand']")).click();
-			
-			
-			
-			driver.findElement(By.xpath("//div[@class='_24_Dny']/following-sibling::div[text()='HP']")).click();
-			
-		
-			
-			driver.findElement(By.xpath("//div[@class='_2gmUFU _3V8rao' and text()='Operating System']")).click();
-			
-	
-			
-			driver.findElement(By.xpath("//div[@class='_24_Dny']/following-sibling::div[text()='Windows 11']")).click();
-			
-			
-			
-			driver.findElement(By.xpath("//div[@class='_3879cV' and (text()='4★ & above')]")).click();
-			
-			
-		}
+
+		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+
+		ChromeOptions co = new ChromeOptions();
+
+		co.addArguments("--remote-allow-origins=*");
+
+		WebDriver driver=new ChromeDriver(co);
+
+		driver.manage().window().maximize();
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		driver.get("https://www.flipkart.com/");
+
+
+
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("HP laptop");
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//button[@class='L0Z3Pu']")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//div[@class='_3879cV' and text()='Core i7']")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//div[@class='_2gmUFU _3V8rao' and text()='Brand']")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//div[@class='_24_Dny']/following-sibling::div[text()='HP']")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//div[@class='_2gmUFU _3V8rao' and text()='Operating System']")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//div[@class='_24_Dny']/following-sibling::div[text()='Windows 11']")).click();
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//div[@class='_3879cV' and (text()='4★ & above')]")).click();
+
+
+	}
 
 }

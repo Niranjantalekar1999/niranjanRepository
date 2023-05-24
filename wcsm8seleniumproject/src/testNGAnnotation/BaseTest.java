@@ -10,24 +10,24 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 	static WebDriver driver;
-  @BeforeTest
-  public void propertyMethod() {
-	  System.setProperty("webdriver,chrome,driver","./driver/chromedriver.exe");
-  }
-  
-  @BeforeMethod
-  public void setUp()
-  {
-	  driver=new ChromeDriver();
-	  driver.manage().window().maximize();
-	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	  driver.get("https://www.google.com");
-  }
-  
-  @AfterMethod
-  public void tearDown() throws InterruptedException
-  {
-	  Thread.sleep(2000);
-	  driver.quit();
-  }
+	@BeforeTest
+	public void propertyMethod() {
+		System.setProperty("webdriver,chrome,driver","./driver/chromedriver.exe");
+	}
+
+	@BeforeMethod
+	public void setUp()
+	{
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.get("https://www.google.com");
+	}
+
+	@AfterMethod
+	public void tearDown() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		driver.quit();
+	}
 }
