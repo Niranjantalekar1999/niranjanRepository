@@ -1,4 +1,4 @@
-package testNGpack;
+package testNGExecution;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
