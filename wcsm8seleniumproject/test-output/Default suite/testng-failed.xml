@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGpack.DemoTest3">
+      <class name="dynamicScreenShotPackage.TestCase">
         <methods>
-          <include name="test3"/>
+          <include name="setUp"/>
+          <include name="login"/>
+          <include name="property"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- testNGpack.DemoTest3 -->
+      </class> <!-- dynamicScreenShotPackage.TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
