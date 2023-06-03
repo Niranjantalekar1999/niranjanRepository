@@ -1,8 +1,12 @@
 package dynamicScreenShotPackage;
 
 import org.junit.Assert;
+
 import org.openqa.selenium.By;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+@Listeners(CustomeListners.class)
 
 public class TestCase extends BaseTest {
   @Test
