@@ -37,5 +37,16 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Vijay Patil/.p2/pool/plugins/org.testng_7.8.0.r202306071539.jar" sourcepath="C:/Users/Vijay Patil/.p2/pool/plugins/org.testng.source_7.8.0.r202306071539.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vijay Patil/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar" sourcepath="C:/Users/Vijay Patil/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.groupId" value="org.testng"/>
+			<attribute name="maven.artifactId" value="testng"/>
+			<attribute name="maven.version" value="7.8.0"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

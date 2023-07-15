@@ -18,10 +18,12 @@ public class TaskListPage {
 	@FindBy(xpath="//*[@name='name']") private WebElement CustomerNameTB;
 	@FindBy(xpath="//input[@type='submit']") private WebElement CreateCustomerButton;
 	@FindBy(xpath="//input[@onclick='cancelCustomerCreation();']") private WebElement CancelCustomerButton;
-	@FindBy(xpath="//*[@name='customerId']") private WebElement  projectNameTB;
-	@FindBy(xpath="//*[@name='name']") private WebElement  ProjectNameTB;
+
+	@FindBy(xpath="//input[@name='name']") private WebElement  ProjectNameTB;
 	@FindBy(xpath="//*[@name='createProjectSubmit']") private WebElement CreateProjectButton;
 	@FindBy(xpath="//input[@onclick='cancelProjectCreation();']") private WebElement CancelButton;
+	@FindBy(xpath="//select[@name='customerId']") private WebElement SelectCustDropdown;
+	
 
 
 //initialization
@@ -77,7 +79,7 @@ public WebElement getCancelCustomerButton() {
 
 
 public WebElement getProjectNameTB() {
-	return projectNameTB;
+	return ProjectNameTB;
 }
 
 
@@ -95,6 +97,9 @@ public WebElement getCancelButton() {
 	return CancelButton;
 }
 
+public WebElement getSelectCustDropdown() {
+	return SelectCustDropdown;
+}
 public void createNewCustomerMethod(String custName) throws InterruptedException
 {
 	Project_CustModule.click();
@@ -105,14 +110,16 @@ public void createNewCustomerMethod(String custName) throws InterruptedException
 }
 
 
-public void createProjectMethod(int index,String proName, WebElement dropDownElement) throws InterruptedException
+public void createProjectMethod(int index,String proName) throws InterruptedException
 {
 	CNProject.click();
 	Worklib wb = new Worklib();
-	wb.dropDownSelect(dropDownElement,index);
-	projectNameTB.sendKeys(proName);
+	wb.dropDownSelect(SelectCustDropdown,index);
+	Thread.sleep(1000);
+	ProjectNameTB.sendKeys(proName);
 	Thread.sleep(2000);
 	CreateProjectButton.click();
+	Thread.sleep(1000);
 }
 
 }

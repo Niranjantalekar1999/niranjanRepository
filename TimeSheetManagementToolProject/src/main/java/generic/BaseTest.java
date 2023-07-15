@@ -21,7 +21,8 @@ public class BaseTest extends Flib implements IAutoConstant {
 
 	protected static WebDriver driver;
 
-	// It is use to open the browser & close the browser
+	// It is use browser & close the browser
+	
 	@BeforeMethod
 	public void setUp() throws IOException
 	{

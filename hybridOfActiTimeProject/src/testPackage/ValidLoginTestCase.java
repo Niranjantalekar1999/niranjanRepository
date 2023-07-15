@@ -18,8 +18,7 @@ public class ValidLoginTestCase extends BaseTest {
      @Test
 	public void validTestCase() throws IOException, InterruptedException
 	{
-		BaseTest bt = new BaseTest();
-		bt.setUp();
+		
 		Flib flib = new Flib();
 		LoginPage lp = new LoginPage(driver);
 		lp.validLogin(flib.readPropertyData(PROP_PATH, "username"),flib.readPropertyData(PROP_PATH, "password"));
@@ -34,9 +33,9 @@ public class ValidLoginTestCase extends BaseTest {
 		Thread.sleep(2000);
 		hp.taskModuleMethod();
 		TaskListPage task= new TaskListPage(driver);
-		task.createNewCustomerMethod(flib.readExcelData(EXCEL_PATH,"customer&projectList",1, 0));
+		task.createNewCustomerMethod(flib.readExcelData(EXCEL_PATH,"customer&projectList",1,0));
 		Thread.sleep(2000);
-		task.createProjectMethod(1,flib.readExcelData(EXCEL_PATH,"customer&projectList" ,1, 1), null);
+		task.createProjectMethod(1,flib.readExcelData(EXCEL_PATH,"customer&projectList",1,1));
 		
 		
 		
