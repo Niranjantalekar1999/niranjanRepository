@@ -19,5 +19,4 @@ public class ValidLoginTestCase extends BaseTest {
 		Flib flib = new Flib();
 		lp.validLogin(flib.readPropertyData(PROP_PATH1,"username"),flib.readPropertyData(PROP_PATH1,"password"));
 	}
-
 }

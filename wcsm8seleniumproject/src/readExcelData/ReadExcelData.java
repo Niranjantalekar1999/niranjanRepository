@@ -17,7 +17,7 @@ public class ReadExcelData {
 		FileInputStream fis = new FileInputStream("./data/TestData.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
          Sheet sheet = wb.getSheet("IPL");
-         Row row = sheet.getRow(3);
+         Row row = sheet.getRow(6);
          Cell cell = row.getCell(1);
          String data = cell.getStringCellValue();
          System.out.println(data);
